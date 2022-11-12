@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="/Hakaton Materials/css/mujkic.css" />
+  
+    
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div>
+      <d<div class="overlay-navigation">
+        <nav role="navigation">
+          <ul>
+            <li>
+              <a href="/homePage.html" data-content="Pronađi nova poznanstva">Učenje</a>
+            </li>
+            <li><a href="#" data-content="Trebaš pomoć?">Instrukcije</a></li>
+            <li>
+              <a
+                href="/dogadjaji /dogadjaji.html"
+                data-content="Budi u korak sa vremenom"
+                >Događaji</a
+              >
+            </li>
+            <li>
+              <a
+                href="/Hakaton Materials/html/prilike.html"
+                data-content="Pronađi nove šanse"
+                >Prilike</a
+              >
+            </li>
+            <li>
+              <a href="/about/oNama.html" data-content="Upoznaj nas">O nama</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <section class="home">
+        <h1 style="text-align: center; color: aliceblue">PRILIKE</h1>
+        <div class="open-overlay">
+          <span class="bar-top" style="color: aliceblue"></span>
+          <span class="bar-middle" style="color: aliceblue"></span>
+          <span class="bar-bottom" style="color: aliceblue"></span>
+        </div>
+      </section>
+    </div>
+    <div class="card gedf-card">
+      <div class="card-header">
+          <div class="d-flex justify-content-between align-items-center">
+              <div class="d-flex justify-content-between align-items-center">
+                  <div class="mr-2">
+                      <img class="rounded-circle" width="45" src="/Hakaton Materials/mujkic_slike/code_red.jpg" alt="">
+                  </div>
+                  <div class="ml-2">
+                      <div class="h5 m-0">@codered</div>
+                      <div class="h7 text-muted">Code Red</div>
+                  </div>
+              </div>
+              <div>
+                  
+              </div>
+          </div>
+
+      </div>
+      <div class="card-body">
+          <div class="text-muted h7 mb-2"> <i class="fa fa-clock-o"></i> 10 min ago</div>
+          
+              <h5 class="card-title">Otvorene prijave za internship u kompaniji Code Red</h5>
+          
+
+          <p class="card-text">
+            Obrazovanje i društvena odgovornost sastavni su dio Code Red kulture. Kompanija je posvećena pružanju podrške budućim IT profesionalcima u izgradnji njihovih karijera, te već devetu godinu provodi programe nase prakse koja se održava do tri puta godišnje. 
+          Ova praksa tromjesečni je program edukacije namijenjen svim osobama koje svoje teorijsko znanje žele primijeniti u praksi. Praktikanti imaju priliku raditi na projektu uz individualno mentorstvo iskusnih Code Red inženjera te, pored sticanja praktičnog iskustva, svi praktikanti zadržavaju vlasništvo nad svojim radom. 
+          </p>
+    
+      </div>
+      <div class="card gedf-card-2">
+        <div class="card-header">
+            <div class="d-flex justify-content-between align-items-center">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div class="mr-2">
+                        <img class="rounded-circle" width="45" src="/Hakaton Materials/mujkic_slike/error 404.webp" alt="">
+                    </div>
+                    <div class="ml-2">
+                        <div class="h5 m-0">@error404</div>
+                        <div class="h7 text-muted">Error 404</div>
+                    </div>
+                </div>
+                <div>
+                    
+                </div>
+            </div>
+  
+        </div>
+        <div class="card-body">
+            <div class="text-muted h7 mb-2"> <i class="fa fa-clock-o"></i> 10 min ago</div>
+            
+                <h5 class="card-title"> Error 404 summer school.</h5>
+            
+  
+            <p class="card-text">
+                Ove godine zapocinjemo sa nasim novim programom pod imenom ERROR ljetna skola. Koja je dostupna svim studentima u regionu te im omogucuju da u kratkom roku svoje vrijeme iskoriste na druzenje i koristan rad koji ce definitivno poboljsati njihovo iskustvo.
+            </p>
+      
+        </div>
+      
+    
+  </section>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+      $(".open-overlay").click(function () {
+        var overlay_navigation = $(".overlay-navigation"),
+          nav_item_1 = $("nav li:nth-of-type(1)"),
+          nav_item_2 = $("nav li:nth-of-type(2)"),
+          nav_item_3 = $("nav li:nth-of-type(3)"),
+          nav_item_4 = $("nav li:nth-of-type(4)"),
+          nav_item_5 = $("nav li:nth-of-type(5)"),
+          top_bar = $(".bar-top"),
+          middle_bar = $(".bar-middle"),
+          bottom_bar = $(".bar-bottom");
+
+        overlay_navigation.toggleClass("overlay-active");
+        if (overlay_navigation.hasClass("overlay-active")) {
+          top_bar
+            .removeClass("animate-out-top-bar")
+            .addClass("animate-top-bar");
+          middle_bar
+            .removeClass("animate-out-middle-bar")
+            .addClass("animate-middle-bar");
+          bottom_bar
+            .removeClass("animate-out-bottom-bar")
+            .addClass("animate-bottom-bar");
+          overlay_navigation
+            .removeClass("overlay-slide-up")
+            .addClass("overlay-slide-down");
+          nav_item_1
+            .removeClass("slide-in-nav-item-reverse")
+            .addClass("slide-in-nav-item");
+          nav_item_2
+            .removeClass("slide-in-nav-item-delay-1-reverse")
+            .addClass("slide-in-nav-item-delay-1");
+          nav_item_3
+            .removeClass("slide-in-nav-item-delay-2-reverse")
+            .addClass("slide-in-nav-item-delay-2");
+          nav_item_4
+            .removeClass("slide-in-nav-item-delay-3-reverse")
+            .addClass("slide-in-nav-item-delay-3");
+          nav_item_5
+            .removeClass("slide-in-nav-item-delay-4-reverse")
+            .addClass("slide-in-nav-item-delay-4");
+        } else {
+          top_bar
+            .removeClass("animate-top-bar")
+            .addClass("animate-out-top-bar");
+          middle_bar
+            .removeClass("animate-middle-bar")
+            .addClass("animate-out-middle-bar");
+          bottom_bar
+            .removeClass("animate-bottom-bar")
+            .addClass("animate-out-bottom-bar");
+          overlay_navigation
+            .removeClass("overlay-slide-down")
+            .addClass("overlay-slide-up");
+          nav_item_1
+            .removeClass("slide-in-nav-item")
+            .addClass("slide-in-nav-item-reverse");
+          nav_item_2
+            .removeClass("slide-in-nav-item-delay-1")
+            .addClass("slide-in-nav-item-delay-1-reverse");
+          nav_item_3
+            .removeClass("slide-in-nav-item-delay-2")
+            .addClass("slide-in-nav-item-delay-2-reverse");
+          nav_item_4
+            .removeClass("slide-in-nav-item-delay-3")
+            .addClass("slide-in-nav-item-delay-3-reverse");
+          nav_item_5
+            .removeClass("slide-in-nav-item-delay-4")
+            .addClass("slide-in-nav-item-delay-4-reverse");
+        }
+      });
+    </script>
+  </body>
+</html>

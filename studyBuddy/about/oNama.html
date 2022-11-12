@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="oNama.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div>
+      <div class="overlay-navigation">
+        <nav role="navigation">
+          <ul>
+            <li>
+              <a href="/homePage.html" data-content="Pronađi nova poznanstva">Učenje</a>
+            </li>
+            <li><a href="#" data-content="Trebaš pomoć?">Instrukcije</a></li>
+            <li>
+              <a
+                href="/dogadjaji /dogadjaji.html"
+                data-content="Budi u korak sa vremenom"
+                >Događaji</a
+              >
+            </li>
+            <li>
+              <a
+                href="/Hakaton Materials/html/prilike.html"
+                data-content="Pronađi nove šanse"
+                >Prilike</a
+              >
+            </li>
+            <li>
+              <a href="/about/oNama.html" data-content="Upoznaj nas">O nama</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <section class="home">
+        <h1 style="text-align: center; color: aliceblue">O NAMA</h1>
+        <div class="open-overlay">
+          <span class="bar-top" style="color: aliceblue"></span>
+          <span class="bar-middle" style="color: aliceblue"></span>
+          <span class="bar-bottom" style="color: aliceblue"></span>
+        </div>
+      </section>
+    </div>
+    <div class="card gedf-card">
+      
+      <div class="card-body">          
+              <h5 class="card-title">Šta je Study Buddy?</h5>
+          
+
+          <h6 class="card-text">
+            Study Buddy je ideja nastala na Telemach Hackatonu 2022. Tim sačinjen od tri člana 
+            sa idejom koja će pomoći srednjoškolcima pri učenju, te studentima kako pri učenju tako i 
+            pronalaženju volonterskog rada i prakse u raznim poljima.
+          <h6>
+    
+      </div>
+    </div>
+    <div class="card gedf-card-2">
+      
+      <div class="card-body" >          
+              <h5 class="card-title">Osnivač</h5>
+          
+
+          <h6 class="card-text">
+            <strong>Amar Mujkić</strong> , jedan od osnivača i pokretač ove ideje, u momentu osnivanja je u ekipi
+            od troje bio ključni član osnivanja ove ideje. Kao student i mladi developer je sa svojim znanjem itekako
+            pomogao u realizaciji Study Buddy-ija. 
+          <h6>
+            
+      </div>
+      </div>
+
+      <div class="card gedf-card-3">
+
+        <div class="card-body">
+          <h5 class="card-title">Osnivač</h5>
+          <h6 class="card-text">
+            <strong>Feđa Pandžić</strong> , jedan od osnivača i pokretač ove ideje, u momentu osnivanja je u ekipi
+             od troje bio ključni član osnivanja ove ideje. Kao student i mladi developer je sa svojim znanjem itekako
+            pomogao u realizaciji Study Buddy-ija. 
+          <h6>
+
+        </div>
+
+        </div>
+        <div class="card gedf-card-4">
+
+          <div class="card-body">
+            <h5 class="card-title">Osnivač</h5>
+            <h6 class="card-text">
+              <strong>Vedran Kilalić</strong> , jedan od osnivača i pokretač ove ideje, u momentu osnivanja je u ekipi
+               od troje bio ključni član osnivanja ove ideje. Kao student i mladi developer je sa svojim znanjem itekako
+              pomogao u realizaciji Study Buddy-ija. 
+            <h6>
+  
+          </div>
+          </div>
+    
+      
+    
+  </section>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+      $(".open-overlay").click(function () {
+        var overlay_navigation = $(".overlay-navigation"),
+          nav_item_1 = $("nav li:nth-of-type(1)"),
+          nav_item_2 = $("nav li:nth-of-type(2)"),
+          nav_item_3 = $("nav li:nth-of-type(3)"),
+          nav_item_4 = $("nav li:nth-of-type(4)"),
+          nav_item_5 = $("nav li:nth-of-type(5)"),
+          top_bar = $(".bar-top"),
+          middle_bar = $(".bar-middle"),
+          bottom_bar = $(".bar-bottom");
+
+        overlay_navigation.toggleClass("overlay-active");
+        if (overlay_navigation.hasClass("overlay-active")) {
+          top_bar
+            .removeClass("animate-out-top-bar")
+            .addClass("animate-top-bar");
+          middle_bar
+            .removeClass("animate-out-middle-bar")
+            .addClass("animate-middle-bar");
+          bottom_bar
+            .removeClass("animate-out-bottom-bar")
+            .addClass("animate-bottom-bar");
+          overlay_navigation
+            .removeClass("overlay-slide-up")
+            .addClass("overlay-slide-down");
+          nav_item_1
+            .removeClass("slide-in-nav-item-reverse")
+            .addClass("slide-in-nav-item");
+          nav_item_2
+            .removeClass("slide-in-nav-item-delay-1-reverse")
+            .addClass("slide-in-nav-item-delay-1");
+          nav_item_3
+            .removeClass("slide-in-nav-item-delay-2-reverse")
+            .addClass("slide-in-nav-item-delay-2");
+          nav_item_4
+            .removeClass("slide-in-nav-item-delay-3-reverse")
+            .addClass("slide-in-nav-item-delay-3");
+          nav_item_5
+            .removeClass("slide-in-nav-item-delay-4-reverse")
+            .addClass("slide-in-nav-item-delay-4");
+        } else {
+          top_bar
+            .removeClass("animate-top-bar")
+            .addClass("animate-out-top-bar");
+          middle_bar
+            .removeClass("animate-middle-bar")
+            .addClass("animate-out-middle-bar");
+          bottom_bar
+            .removeClass("animate-bottom-bar")
+            .addClass("animate-out-bottom-bar");
+          overlay_navigation
+            .removeClass("overlay-slide-down")
+            .addClass("overlay-slide-up");
+          nav_item_1
+            .removeClass("slide-in-nav-item")
+            .addClass("slide-in-nav-item-reverse");
+          nav_item_2
+            .removeClass("slide-in-nav-item-delay-1")
+            .addClass("slide-in-nav-item-delay-1-reverse");
+          nav_item_3
+            .removeClass("slide-in-nav-item-delay-2")
+            .addClass("slide-in-nav-item-delay-2-reverse");
+          nav_item_4
+            .removeClass("slide-in-nav-item-delay-3")
+            .addClass("slide-in-nav-item-delay-3-reverse");
+          nav_item_5
+            .removeClass("slide-in-nav-item-delay-4")
+            .addClass("slide-in-nav-item-delay-4-reverse");
+        }
+      });
+    </script>
+  </body>
+</html>

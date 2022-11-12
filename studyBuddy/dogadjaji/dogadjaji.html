@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="dogadjaji.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div>
+      <div class="overlay-navigation">
+        <nav role="navigation">
+          <ul>
+            <li>
+              <a href="/homePage.html" data-content="Pronađi nova poznanstva">Učenje</a>
+            </li>
+            <li><a href="#" data-content="Trebaš pomoć?">Instrukcije</a></li>
+            <li>
+              <a
+                href="/dogadjaji /dogadjaji.html"
+                data-content="Budi u korak sa vremenom"
+                >Događaji</a
+              >
+            </li>
+            <li>
+              <a
+                href="/Hakaton Materials/html/prilike.html"
+                data-content="Pronađi nove šanse"
+                >Prilike</a
+              >
+            </li>
+            <li>
+              <a href="/about/oNama.html" data-content="Upoznaj nas">O nama</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <section class="home">
+        <h1 style="text-align: center; color: aliceblue">DOGAĐAJI</h1>
+        <div class="open-overlay">
+          <span class="bar-top" style="color: aliceblue"></span>
+          <span class="bar-middle" style="color: aliceblue"></span>
+          <span class="bar-bottom" style="color: aliceblue"></span>
+        </div>
+      </section>
+    </div>
+    <div class="card gedf-card">
+      <div class="card-header">
+          <div class="d-flex justify-content-between align-items-center">
+              <div class="d-flex justify-content-between align-items-center">
+                  <div class="mr-2">
+                      <img class="rounded-circle" width="45" src="./images/nature.jpg" alt="">
+                  </div>
+                  <div class="ml-2">
+                      <div class="h5 m-0">trebalsta.ba
+                      </div>
+                      <div class="h7 text-muted">Trebal Sta</div>
+                  </div>
+              </div>
+              <div>
+                  
+              </div>
+          </div>
+
+      </div>
+      <div class="card-body">
+          <div class="text-muted h7 mb-2"> <i class="fa fa-clock-o"></i> 10 min ago</div>
+          
+              <h5 class="card-title">Volonterski rad za trebalsta.ba</h5>
+          
+
+          <p class="card-text">
+            Trebalsta.ba je platforma putem koje će se na jednom mjestu registrovati srednjoškolci iz 
+            Kantona Sarajevo koji žele volontirati i pružati pomoć, 
+            s jedne strane, te humanitarni i drugi društveno korisni projekti, 
+            s druge strane kako bi aktivnost društvenog angažmana bila transparentna, 
+            evidentirana i kontrolisana, u smislu praćenja radi sprečavanja zloupotreba te 
+            kako bi se uspostavilo bodovanje volonterskih aktivnosti radi afirmacije najaktivnijih mladih ljudi.  
+          </p>
+    
+      </div>
+      <div class="card gedf-card-2">
+        <div class="card-header">
+            <div class="d-flex justify-content-between align-items-center">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div class="mr-2">
+                        <img class="rounded-circle" width="45" src="./images/sff.jpg" alt="">
+                    </div>
+                    <div class="ml-2">
+                        <div class="h5 m-0">Sarajevo Film Festival</div>
+                        <div class="h7 text-muted">Sarajevo Film Festival</div>
+                    </div>
+                </div>
+                <div>
+                    
+                </div>
+            </div>
+  
+        </div>
+        <div class="card-body">
+            <div class="text-muted h7 mb-2"> <i class="fa fa-clock-o"></i> 10 min ago</div>
+            
+                <h5 class="card-title"> Volontiranje za SFF</h5>
+            
+  
+            <p class="card-text">
+              Poslovi tehničke pripreme Festivala, pomoć prilikom dočeka, registracije i smještaja gostiju, te rad u Festivalskom i Press centru, samo su neke od brojnih mogućnosti koje se nude volonterima. Pored toga što postaju dio jednog velikog i uspješnog događaja, volonteri imaju priliku razvijati svoje vještine i usvajati nova znanja. 
+            </p>
+      
+        </div>
+      
+    
+  </section>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+      $(".open-overlay").click(function () {
+        var overlay_navigation = $(".overlay-navigation"),
+          nav_item_1 = $("nav li:nth-of-type(1)"),
+          nav_item_2 = $("nav li:nth-of-type(2)"),
+          nav_item_3 = $("nav li:nth-of-type(3)"),
+          nav_item_4 = $("nav li:nth-of-type(4)"),
+          nav_item_5 = $("nav li:nth-of-type(5)"),
+          top_bar = $(".bar-top"),
+          middle_bar = $(".bar-middle"),
+          bottom_bar = $(".bar-bottom");
+
+        overlay_navigation.toggleClass("overlay-active");
+        if (overlay_navigation.hasClass("overlay-active")) {
+          top_bar
+            .removeClass("animate-out-top-bar")
+            .addClass("animate-top-bar");
+          middle_bar
+            .removeClass("animate-out-middle-bar")
+            .addClass("animate-middle-bar");
+          bottom_bar
+            .removeClass("animate-out-bottom-bar")
+            .addClass("animate-bottom-bar");
+          overlay_navigation
+            .removeClass("overlay-slide-up")
+            .addClass("overlay-slide-down");
+          nav_item_1
+            .removeClass("slide-in-nav-item-reverse")
+            .addClass("slide-in-nav-item");
+          nav_item_2
+            .removeClass("slide-in-nav-item-delay-1-reverse")
+            .addClass("slide-in-nav-item-delay-1");
+          nav_item_3
+            .removeClass("slide-in-nav-item-delay-2-reverse")
+            .addClass("slide-in-nav-item-delay-2");
+          nav_item_4
+            .removeClass("slide-in-nav-item-delay-3-reverse")
+            .addClass("slide-in-nav-item-delay-3");
+          nav_item_5
+            .removeClass("slide-in-nav-item-delay-4-reverse")
+            .addClass("slide-in-nav-item-delay-4");
+        } else {
+          top_bar
+            .removeClass("animate-top-bar")
+            .addClass("animate-out-top-bar");
+          middle_bar
+            .removeClass("animate-middle-bar")
+            .addClass("animate-out-middle-bar");
+          bottom_bar
+            .removeClass("animate-bottom-bar")
+            .addClass("animate-out-bottom-bar");
+          overlay_navigation
+            .removeClass("overlay-slide-down")
+            .addClass("overlay-slide-up");
+          nav_item_1
+            .removeClass("slide-in-nav-item")
+            .addClass("slide-in-nav-item-reverse");
+          nav_item_2
+            .removeClass("slide-in-nav-item-delay-1")
+            .addClass("slide-in-nav-item-delay-1-reverse");
+          nav_item_3
+            .removeClass("slide-in-nav-item-delay-2")
+            .addClass("slide-in-nav-item-delay-2-reverse");
+          nav_item_4
+            .removeClass("slide-in-nav-item-delay-3")
+            .addClass("slide-in-nav-item-delay-3-reverse");
+          nav_item_5
+            .removeClass("slide-in-nav-item-delay-4")
+            .addClass("slide-in-nav-item-delay-4-reverse");
+        }
+      });
+    </script>
+  </body>
+</html>
